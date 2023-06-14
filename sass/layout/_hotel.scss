@@ -1,0 +1,25 @@
+.hotel {
+    @include padding;
+    @include flex;
+    gap: 12.6rem;
+    &__info {
+        h2 {
+            @include font_1(3.6rem, 600, 5.4rem);
+            color: $primary-color;
+            letter-spacing: -0.01em;
+            font-family: montserrat;
+        }
+        p:nth-child(2){
+            margin-bottom: -.8rem
+        }
+        p {
+            @include font_1;
+            color: $secondary;
+            @include pragraph_m;
+        }
+        button {
+            @include btn;
+            @include font_2;
+        }
+    }
+}

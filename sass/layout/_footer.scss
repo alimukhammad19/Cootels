@@ -1,0 +1,47 @@
+footer {
+    background-color: $footer-bg;
+
+    .footer {
+        padding: 12rem 0;
+        @include flex(space-between);
+
+        &__logo {
+            @include font_1(3.2rem, 700, 3.9rem);
+            font-family: montserrat;
+            color: $third-color;
+        }
+        &__left{
+            p{
+                @include font_2(1.6rem, 400, 2.8rem);
+                color: #D9DBDE;
+                margin: 1.3rem 0 3.6rem;
+            }
+        }
+        &__social{
+            @include flex;
+            gap: 2.4rem;
+            img{
+                cursor: pointer;
+            }
+        }
+        &__right{
+            @include flex;
+            align-items: start;
+            gap: 12.5rem;
+        }
+        &__item-ul{
+            @include flex;
+            flex-direction: column;
+            align-items: start;
+            gap: 2.4rem
+        }
+        &__link{
+            @include font_2(1.6rem, 400, 1.9rem);
+            color: #D9DBDE;
+        }
+        .main-link{
+            @include font_2(1.7rem, 900, 1.9rem);
+            letter-spacing: 0.01em;
+        }
+    }
+}

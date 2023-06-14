@@ -1,0 +1,105 @@
+.contact {
+    @include flex(space-between);
+    align-items: flex-start;
+    @include padding;
+
+    &__info {
+        padding: 3.75rem 0;
+
+        span {
+            @include font_2(1.6rem, 500, 2.4rem);
+            color: #424F7B;
+        }
+
+        h2 {
+            @include font_1(3.6rem, 600, 5.4rem);
+            color: $primary-color;
+            letter-spacing: -0.01em;
+            font-family: montserrat;
+        }
+
+        p {
+            @include pragraph_m;
+            @include font_1;
+            color: $secondary;
+        }
+    }
+
+    &__buttons {
+        @include flex;
+        gap: 2.4rem;
+
+        button {
+            @include btn;
+            @include font_2;
+        }
+
+        a {
+            @include font_2;
+            color: $btn-bg;
+        }
+    }
+}
+
+.contact-acc {
+    &__part:nth-child(2) {
+        margin: 2.4rem 0 2.4rem;
+    }
+
+    &__part {
+        @include flex_2;
+        // padding: 3rem 3rem 3rem 3.6rem;
+        border-radius: .4rem;
+        box-shadow: .3rem .4rem .4rem #333;
+
+        label {
+            width: 100%;
+            padding: 3rem 3rem 3rem 3.6rem;
+            cursor: pointer;
+            color: #424F7B;
+            @include font_1(2.4rem, 600, 3.6rem);
+            @include flex(space-between);
+
+            img:nth-child(2) {
+                padding: 1.65rem 1.315rem;
+                background-color: $acc_down_bg;
+                border-radius: 50%;
+            }
+
+            img:nth-child(3) {
+                display: none;
+                border-radius: 50%;
+                padding: 1.65rem 1.315rem;
+                background-color: $acc_up_bg;
+            }
+        }
+
+        input {
+            display: none;
+        }
+    }
+
+    &__content {
+        @include font_1;
+        color: $secondary;
+
+        max-height: 0rem;
+        overflow: hidden;
+        transition: all .5s ease;
+        padding: 0 3rem 0rem 3.6rem;
+    }
+}
+
+.input:checked {
+    ~.contact-acc__content {
+        max-height: 5.1rem;
+        margin-top: 2.4rem;
+        padding-bottom: 6rem;
+    }
+    ~label>img:nth-child(2) {
+        display: none;
+    }
+    ~label>img:nth-child(3) {
+        display: block;
+    }
+}

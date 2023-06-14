@@ -1,0 +1,49 @@
+.rooms {
+    @include padding;
+
+    &__sub {
+        text-align: center;
+        margin-bottom: 8.8rem;
+
+        h2 {
+            @include font_1(3.6rem, 600, 5.4rem);
+            color: $primary-color;
+            letter-spacing: -0.01em;
+            font-family: montserrat;
+        }
+
+        p {
+            @include pragraph_m;
+            @include font_1;
+            color: $secondary;
+        }
+        button{
+            @include btn;
+            @include font_2;
+        }
+    }
+    &__types{
+        @include flex(space-between);
+    }
+    &__type{
+        h3{
+            @include font_1(2.4rem, 600, 3.6rem);
+            font-family: montserrat;
+            margin-top: 3.2rem;
+        }
+        p{
+            @include pragraph_m;
+            @include font_1;
+            color: $secondary;
+            margin-top: 1.6rem;
+        }
+        a{
+            @include flex;
+            gap: 1.2rem;
+            span{
+                @include font_1;
+                color: #424F7B;
+            }
+        }
+    }
+}

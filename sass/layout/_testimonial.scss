@@ -1,0 +1,43 @@
+.testimonial {
+    text-align: center;
+    @include padding;
+
+    h2 {
+        @include font_1(3.6rem, 600, 5.4rem);
+        color: $primary-color;
+        letter-spacing: -0.01em;
+        font-family: montserrat;
+    }
+
+    &__img {
+        margin: 6.2rem 0 4.4rem 0;
+    }
+
+    q {
+        @include pragraph_m;
+        @include font_1;
+        color: $secondary;
+    }
+
+    h4 {
+        margin: 4rem 0 2.4rem;
+        @include font_1(2rem, 500, 3rem);
+        color: $primary-color;
+    }
+    .circles{
+        @include flex(center);
+        gap: 1.2rem;
+        div{
+            width: .8rem;
+            height: .8rem;
+            background: rgba(250, 176, 71, 0.35);
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        div:nth-child(2){
+            width: 1.2rem;
+            height: 1.2rem;
+            background-color: #FAB047;
+        }
+    }
+}
